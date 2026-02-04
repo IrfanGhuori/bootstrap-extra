@@ -34,7 +34,7 @@ This is an advanced version of Bootstrap 5.x. In design, we modified some functi
   ## Quick start
 - Several quick start options are available:
 - Download the latest release.
-- Clone the repo: git clone https://github.com/IrfanGhuori/bootstrap-extra.git
+- Clone the repo: git clone [https://github.com/IrfanGhuori/bootstrap-extra.git](https://github.com/IrfanGhuori/bootstrap-extra.git)
 
 
   ## 💰 You can help me by Donating
