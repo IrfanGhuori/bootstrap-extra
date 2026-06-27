@@ -26,7 +26,6 @@ This is an advanced version of Bootstrap 5.x. In design, we modified some functi
   - Alert completely changed
   - Easily Add page-loading animation 
   - Glassmorphism effect backgrounds
-  - 1000+ New Classes
   - Auto Broken Images Replacer
   - More Components
   
