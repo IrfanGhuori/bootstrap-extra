@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap Extra Examples</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: rgba(255, 255, 255, 0.95);
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #2563eb;
+      --accent-2: #7c3aed;
+      --border: rgba(148, 163, 184, 0.25);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.2), transparent 25%),
+        linear-gradient(135deg, #0f172a 0%, #111827 100%);
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: 2.5rem 2rem 1.5rem;
+      background: linear-gradient(120deg, var(--accent), var(--accent-2));
+      color: white;
+    }
+
+    .hero h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 700px;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    .content {
+      padding: 1.5rem 2rem 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .grid li a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1rem;
+      text-decoration: none;
+      color: var(--text);
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .grid li a:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.16);
+    }
+
+    .grid li a span:last-child {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .footer-note {
+      margin-top: 1.2rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero, .content { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <h1>Bootstrap Extra Examples</h1>
+      <p>Explore a curated collection of stylish UI demos and reusable components built with Bootstrap.</p>
+    </div>
+
+    <div class="content">
+      <ul class="grid">
+        <li><a href="alert.html" target="_blank"><span>Alert</span><span>→</span></a></li>
+        <li><a href="background-colors%208.0.html" target="_blank" ><span>Background Colors</span><span>→</span></a></li>
+        <li><a href="background-image%208.0.html" target="_blank" ><span>Background Image</span><span>→</span></a></li>
+        <li><a href="badge%208.0.html" target="_blank" ><span>Badge</span><span>→</span></a></li>
+        <li><a href="button%208.0.html" target="_blank" ><span>Button</span><span>→</span></a></li>
+        <li><a href="call-id%208.0.html" target="_blank" ><span>Call ID</span><span>→</span></a></li>
+        <li><a href="card%208.0.html" target="_blank" ><span>Card</span><span>→</span></a></li>
+        <li><a href="fancy-title%208.0.html" target="_blank" ><span>Fancy Title</span><span>→</span></a></li>
+        <li><a href="flaticons%208.0.html" target="_blank" ><span>Flaticons</span><span>→</span></a></li>
+        <li><a href="font-awesome%208.0.html" target="_blank" ><span>Font Awesome</span><span>→</span></a></li>
+        <li><a href="fonts%208.0.html" target="_blank" ><span>Fonts</span><span>→</span></a></li>
+        <li><a href="image-hover%208.0.html" target="_blank" ><span>Image Hover</span><span>→</span></a></li>
+        <li><a href="modal%208.0.html" target="_blank" ><span>Modal</span><span>→</span></a></li>
+        <li><a href="navbar%208.0.html" target="_blank" ><span>Navbar</span><span>→</span></a></li>
+        <li><a href="pageLoading%20%208.0.html" target="_blank" ><span>Page Loading</span><span>→</span></a></li>
+        <li><a href="playsound%208.0.html" target="_blank" ><span>Play Sound</span><span>→</span></a></li>
+        <li><a href="shadow%20%208.0.html" target="_blank" ><span>Shadow</span><span>→</span></a></li>
+        <li><a href="simple-line-icons%208.0.html" target="_blank" ><span>Simple Line Icons</span><span>→</span></a></li>
+        <li><a href="textlimit%208.0.html" target="_blank" ><span>Text Limit</span><span>→</span></a></li>
+        <li><a href="tooltips%20%208.0.html" target="_blank" ><span>Tooltips</span><span>→</span></a></li>
+      </ul>
+
+      <p class="footer-note">Choose a demo to preview it in the browser.</p>
+    </div>
+  </div>
+</body>
+</html>
