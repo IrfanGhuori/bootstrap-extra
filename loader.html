@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bootstrap Extra loader demo">
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <title>Bootstrap Extra Loader</title>
+</head>
+<body>
+  <div class="preloader bg-dark">
+    <div class="inner">
+      <span class="percentage"><span id="percentage">0</span>%</span>
+    </div>
+    <div class="loader-progress" id="loader-progress"></div>
+  </div>
+
+  <div class="container py-5">
+    <div class="card shadow-6dp">
+      <div class="card-header display-7">Loader Demo</div>
+      <div class="card-body">
+        <p class="lead">This demo uses the existing Bootstrap Extra preloader styles and progress animation.</p>
+        <p>When the page finishes loading, the preloader will fade out.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script>
+    if (document.querySelector('.preloader')) {
+      var counting = setInterval(function () {
+        var loader = document.getElementById('percentage');
+        var currval = parseInt(loader.innerHTML, 10);
+        var loadscreen = document.getElementById('loader-progress');
+        var Width = 99 - currval;
+
+        loader.innerHTML = ++currval;
+        if (currval > 89) {
+          loader.innerHTML = 90;
+          if (document.readyState === 'interactive') {
+            loader.innerHTML = 99;
+          }
+          if (document.readyState === 'complete') {
+            clearInterval(counting);
+            loader.innerHTML = 100;
+            $('body').toggleClass('page-loaded');
+            setTimeout(function () {
+              $('nav').css('visibility', 'visible');
+            }, 880);
+          }
+        }
+
+        loadscreen.style.transition = '0.15s';
+        loadscreen.style.width = Width + '%';
+      }, 20);
+    }
+  </script>
+</body>
+</html>
